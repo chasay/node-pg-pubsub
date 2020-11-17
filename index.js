@@ -67,7 +67,7 @@ class PGPubsub extends EventEmitter {
             this.retry.try();
           }
           db.end(err => {
-            log('Received error when disconnecting from database in error callback' + err.message);
+            log('Received error when disconnecting from database in error callback: ' + (err && err.message));
           });
         });
 
